@@ -3,9 +3,8 @@
 
 body {
 	font-family      : "Segoe UI", serif;
-	margin           : 0 auto;
+
 	text-align       : center;
-	width            : 80%;
 	background-color : rgb(230, 230, 230);
 }
 
@@ -17,9 +16,7 @@ h1 {
 }
 
 header, main, footer {
-	margin-top    : 15px;
-	padding       : 20px;
-	border-radius : 10px;
+	font-size: 2.0rem;
 	text-align    : center;
 	background    : whitesmoke;
 }
@@ -32,42 +29,52 @@ header, main, footer {
 .mws-links {
 	display        : flex;
 	flex-direction : column;
-	gap:10px;
+	gap            : 10px;
 }
 
 .mws-link {
-	margin        :  0 auto;
+	margin             : 0 auto;
 
-	overflow: hidden;
-	-webkit-transition: 8ms linear;
-	transition: 8ms linear;
+	overflow           : hidden;
+	-webkit-transition : 8ms linear;
+	transition         : 8ms linear;
 
-	display       : flex;
-	justify-content: center;
+	display            : flex;
+	justify-content    : center;
 
-	padding       : 10px;
+	padding            : 10px;
 
-	border        : 1px solid #01eaff;
-	border-radius : 10px;
+	border             : 1px solid #01eaff;
+	border-radius      : 10px;
 }
 
-.mws-link:hover{
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-	border        : 2px solid #01eaff;
+.mws-link:hover {
+	-webkit-transform : scale(1.15);
+	transform         : scale(1.15);
+	border            : 2px solid #01eaff;
 
 }
 
 .mws-link img {
-	width  : 32px;
+	width : 32px;
 }
 
 .mws-link a {
 
 	width       : 200px;
-	padding-top: 12px;
+	padding-top : 12px;
 	text-align  : center;
 	font-weight : bold;
 
 	color       : black;
+}
+
+@media (min-width : 800px) {
+	header, footer, main {
+		max-width : 80%;
+		margin    : 15px auto;
+		padding       : 20px;
+		border-radius : 10px;
+		font-size: 1.0rem;
+	}
 }
