@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+body {
+	font-family      : "Segoe UI", serif;
+	margin           : 0 auto;
+	text-align       : center;
+	width            : 80%;
+	background-color : rgb(230, 230, 230);
+}
+
+h1 {
+	font-size     : 2.5rem;
+	margin-bottom : 0.5rem;
+	font-weight   : 500;
+	line-height   : 1.2;
+}
+
+header, main, footer {
+	margin-top    : 15px;
+	padding       : 20px;
+	border-radius : 10px;
+	text-align    : center;
+	background    : whitesmoke;
+}
+
+.mws-logo {
+	width  : 15%;
+	margin : 10px;
+}
+
+.mws-links {
+	display        : flex;
+	flex-direction : column;
+	gap:10px;
+}
+
+.mws-link {
+	margin        :  0 auto;
+
+	overflow: hidden;
+	-webkit-transition: 8ms linear;
+	transition: 8ms linear;
+
+	display       : flex;
+	justify-content: center;
+
+	padding       : 10px;
+
+	border        : 1px solid #01eaff;
+	border-radius : 10px;
+}
+
+.mws-link:hover{
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+	border        : 2px solid #01eaff;
+
+}
+
+.mws-link img {
+	width  : 32px;
+}
+
+.mws-link a {
+
+	width       : 200px;
+	padding-top: 12px;
+	text-align  : center;
+	font-weight : bold;
+
+	color       : black;
+}
