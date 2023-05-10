@@ -1,80 +1,124 @@
 @charset "UTF-8";
 
-
 body {
 	font-family      : "Segoe UI", serif;
 
 	text-align       : center;
-	background-color : rgb(230, 230, 230);
+	background: rgba(0,225,255,1);
+	background: -moz-linear-gradient(-45deg, rgba(0,225,255,1) 0%, rgba(41,184,229,1) 50%, rgba(0,110,150,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(0,225,255,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(0,110,150,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(0,225,255,1) 0%, rgba(41,184,229,1) 50%, rgba(0,110,150,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(0,225,255,1) 0%, rgba(41,184,229,1) 50%, rgba(0,110,150,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(0,225,255,1) 0%, rgba(41,184,229,1) 50%, rgba(0,110,150,1) 100%);
+	background: linear-gradient(135deg, rgba(0,225,255,1) 0%, rgba(41,184,229,1) 50%, rgba(0,110,150,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e1ff', endColorstr='#006e96', GradientType=1 );
+}
+
+a {
+	color: black;
 }
 
 h1 {
-	font-size     : 2.5rem;
 	margin-bottom : 0.5rem;
+
+	font-size     : 2.5rem;
 	font-weight   : 500;
+
 	line-height   : 1.2;
 }
 
 header, main, footer {
-	font-size: 2.0rem;
-	text-align    : center;
-	background    : whitesmoke;
+	font-size  : 2.0rem;
 }
 
 .mws-logo {
-	width  : 15%;
+	width  : 40%;
 	margin : 10px;
 }
 
-.mws-links {
-	display        : flex;
-	flex-direction : column;
-	gap            : 10px;
+.mws-links a {
+	margin: 50px 0;
+	display: block;
+
+	text-decoration : none;
+
+	color:black;
+	background-color: white;
 }
 
-.mws-link {
-	margin             : 0 auto;
+.mws-link-container {
+
+	margin             : 10px 0;
+	padding            : 10px;
 
 	overflow           : hidden;
-	-webkit-transition : 8ms linear;
-	transition         : 8ms linear;
+	-webkit-transition : 150ms linear;
+	transition         : 150ms linear;
 
 	display            : flex;
 	justify-content    : center;
+	align-items        : center;
 
-	padding            : 10px;
+	-webkit-box-shadow: 0px 10px 19px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 19px -8px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 19px -8px rgba(0,0,0,0.75);
 
-	border             : 1px solid #01eaff;
 	border-radius      : 10px;
 }
 
-.mws-link:hover {
+.mws-link-container:hover {
+	margin            : 20px 0;
+
+	background-color: #01eaff;
 	-webkit-transform : scale(1.15);
 	transform         : scale(1.15);
+
 	border            : 2px solid #01eaff;
 
 }
 
-.mws-link img {
-	width : 32px;
+.mws-link-img {
+	flex : 1;
 }
 
-.mws-link a {
+.mws-link-img img {
+	width : 60%
+}
 
-	width       : 200px;
-	padding-top : 12px;
-	text-align  : center;
+.mws-link {
+	flex        : 3;
+
 	font-weight : bold;
-
 	color       : black;
 }
 
-@media (min-width : 800px) {
-	header, footer, main {
-		max-width : 80%;
-		margin    : 15px auto;
-		padding       : 20px;
-		border-radius : 10px;
-		font-size: 1.0rem;
+@media (min-width: 1200px) {
+	body {
+		background-color : rgb(230, 230, 230);
 	}
+
+	header, footer, main {
+		max-width     : 80%;
+		background : white;
+		margin        : 15px auto;
+		padding       : 20px;
+
+		border-radius : 10px;
+		font-size     : 1.0rem;
+	}
+
+	.mws-logo {
+		width  : 15%;
+	}
+
+	.mws-links {
+		margin    : 0 auto;
+		max-width : 40%
+	}
+
+	.mws-links a {
+		margin: 0;
+	}
+
+
 }
